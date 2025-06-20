@@ -33,18 +33,18 @@ python src/main.py examples/invalid.json
 
 ## Features
 
-Tokenizes JSON into meaningful parts.
-Parses into Python objects (dict, list).
-Validates structure and detects duplicate keys.
-Error handling for malformed input.
+- Tokenizes JSON into meaningful parts.
+- Parses into Python objects (dict, list).
+- Validates structure and detects duplicate keys.
+- Error handling for malformed input.
 
 ---
 
 ## Technologies Used
 
 ---
-Python 3.12+
-unittest (for testing)
+- Python 3.12+
+- unittest (for testing)
 
 ---
 
@@ -53,14 +53,14 @@ unittest (for testing)
 This project uses semantic versioning:
 
 Version	Description
-v1.0.0	First working build: Parser + Validator
-v1.1.0	Enhanced error handling
-v2.0.0	Future: Add GUI / Partial parsing support
+- v1.0.0	First working build: Parser + Validator
+- v1.1.0	Enhanced error handling
+- v2.0.0	Future: Add GUI / Partial parsing support
 
 ---
 
 ## Future Scope
 
-GUI interface using Tkinter or PyQt.
-Support for partial validation.
-Integration with web-based tools or APIs.
+- GUI interface using Tkinter or PyQt.
+- Support for partial validation.
+- Integration with web-based tools or APIs.
