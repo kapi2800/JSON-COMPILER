@@ -64,3 +64,11 @@ Version	Description
 - GUI interface using Tkinter or PyQt.
 - Support for partial validation.
 - Integration with web-based tools or APIs.
+
+---
+
+## What's New (v1.1.0)
+
+- Added support for multiple JSON objects in one file.
+- Parser now processes each object individually.
+- Improved error reporting without stopping after first error.
