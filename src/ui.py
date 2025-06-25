@@ -1,40 +1,29 @@
 import tkinter as tk
-from tkinter import filedialog, messagebox, scrolledtext
+from tkinter import filedialog
 from main import parse_json
 
-def browse_file():
-    file_path = filedialog.askopenfilename(filetypes=[("JSON Files", "*.json")])
-    if file_path:
+# Function to handle file selection and parsing
+def select_file():
+    path = filedialog.askopenfilename(filetypes=[("JSON files", "*.json")])
+    if path:
         try:
-            with open(file_path, "r") as f:
-                json_str = f.read()
-            result = parse_json(json_str)
-            output_area.config(state='normal')
-            output_area.delete(1.0, tk.END)
-            output_area.insert(tk.END, f"✅ Valid JSON:\n{result}")
-            output_area.config(state='disabled')
+            with open(path, "r") as file:
+                content = file.read()
+                result = parse_json(content)
+                output_label.config(text=" Valid JSON\n" + str(result), fg="green")
         except Exception as e:
-            output_area.config(state='normal')
-            output_area.delete(1.0, tk.END)
-            output_area.insert(tk.END, f"❌ Invalid JSON:\n{str(e)}")
-            output_area.config(state='disabled')
+            output_label.config(text=" Invalid JSON\n" + str(e), fg="red")
 
-# Set up the main window
 window = tk.Tk()
-window.title("JSON Parser & Validator")
-window.geometry("600x400")
+window.title("Simple JSON Validator")
+window.geometry("500x300")
 
-# Header label
-title_label = tk.Label(window, text="JSON Parser & Validator", font=("Arial", 16))
-title_label.pack(pady=10)
+label = tk.Label(window, text="JSON Validator", font=("Arial", 16))
+label.pack(pady=10)
 
-# Button to browse file
-browse_button = tk.Button(window, text="Select JSON File", command=browse_file, width=30, bg="lightblue")
-browse_button.pack(pady=10)
+button = tk.Button(window, text="Choose JSON File", command=select_file)
+button.pack(pady=10)
 
-# Output area
-output_area = scrolledtext.ScrolledText(window, wrap=tk.WORD, width=70, height=15, state='disabled', font=("Consolas", 10))
-output_area.pack(pady=10)
-
-# Start GUI loop
+output_label = tk.Label(window, text="", wraplength=450, justify="left", font=("Arial", 10))
+output_label.pack(pady=20)
 window.mainloop()

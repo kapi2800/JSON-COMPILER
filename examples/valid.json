@@ -1,5 +1,11 @@
-{
+[{
   "name": "Alice",
   "age": 25,
   "active": true
+},
+{
+  "name": "Bob",
+  "age": 30,
+  "active": false
 }
+]
