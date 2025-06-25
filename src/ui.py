@@ -2,7 +2,6 @@ import tkinter as tk
 from tkinter import filedialog
 from main import parse_json
 
-# Function to handle file selection and parsing
 def select_file():
     path = filedialog.askopenfilename(filetypes=[("JSON files", "*.json")])
     if path:
