@@ -18,6 +18,12 @@ All design, implementation, testing, and documentation were done independently.
 
 ---
 
+## Demo
+
+![Demo](./demo.gif)
+
+---
+
 ## Objective
 
 To build a compiler-inspired tool that can:
@@ -39,24 +45,18 @@ This tool is helpful in data validation scenarios where incorrect or malformed J
 - **Multi-JSON Support**: Accepts arrays of JSON objects and validates each individually.
 - **Error Reporting**: Detailed, readable messages.
 - **GUI (Tkinter)**: Simple UI to load and validate files without the command line.
-
----
-
-## Final Additions (Phase 3)
-
-###  Multi-JSON Support
-
-Now supports an array of JSON objects.
     
-
 ---
+
 ## User Interface (UI)
 
 Created a GUI using Tkinter for users who prefer clicking over command-line typing.
 
-Run using:
+#### Run using:
 
-''' python src/ui.py '''
+ python src/ui.py 
+
+---
 
 ## Features:
 
@@ -88,6 +88,7 @@ Version	Description
 
 #### CLI:
 - python src/main.py examples/valid.json
+  
 #### GUI:
 - python src/ui.py
 
@@ -107,7 +108,3 @@ Version	Description
 
 This was a self-built, end-to-end academic project with no external collaboration.
 Created and submitted as part of my college's PBL requirement to apply theoretical concepts in a practical environment.
-
-## Demo
-
-![Demo](./demo.gif)
