@@ -106,5 +106,4 @@ Version	Description
 
 ## Final Note
 
-This was a self-built, end-to-end academic project with no external collaboration.
-Created and submitted as part of my college's PBL requirement to apply theoretical concepts in a practical environment.
+This was submitted as part of my college's PBL requirement to apply theoretical concepts in a practical environment.
