@@ -1,42 +1,67 @@
-# JSON Compiler – Parser & Validator
+# JSON Compiler & Validator
 
-A lightweight JSON Parser and Validator built using core Python to simulate concepts from **Compiler Design** such as Lexical Analysis, Parsing, and Semantic Validation.
-
----
-
-## Project Objective
-
-To create a custom compiler-style tool that parses and validates JSON input, identifying both **syntax** and **semantic** errors (like duplicate keys), without relying on Python's built-in `json` library.
+This project is a **lightweight compiler and validator for JSON (JavaScript Object Notation)**, created as part of a **Project-Based Learning (PBL)** curriculum in my college. It applies compiler design concepts such as **Lexical Analysis**, **Parsing**, and **Semantic Validation** specifically tailored to JSON structures.
 
 ---
 
-## Related to Compiler Design
+## Why I Made This
 
-- **Lexer (Lexical Analyzer)** – Breaks the raw input string into tokens.
-- **Parser (Syntax Analyzer)** – Groups tokens into structured objects.
-- **Validator (Semantic Analyzer)** – Ensures correctness like no duplicate keys.
+This project was built as my **college PBL (Project-Based Learning) submission**, carried out in **three progressive phases**:
 
----
+1. **Phase 1 – Introduction**: Defined the project scope — to simulate a JSON validator using compiler stages.
+2. **Phase 2 – Development**: Implemented core modules to parse and validate a single JSON object.
+3. **Phase 3 – Final Update**: 
+   - Extended support to **multiple JSON objects** (arrays of JSON).
+   - Added a **Graphical User Interface (GUI)** using `Tkinter` for easier and more user-friendly operation.
 
-## How to Run
-
-```bash
-# Example: run with valid JSON
-python src/main.py examples/valid.json
-
-# Example: run with invalid JSON
-python src/main.py examples/invalid.json
-```
+All design, implementation, testing, and documentation were done independently.
 
 ---
 
+## Objective
+
+To build a compiler-inspired tool that can:
+- Tokenize JSON strings
+- Parse them into structured data
+- Validate semantic correctness (e.g., duplicate keys, structure)
+
+This tool is helpful in data validation scenarios where incorrect or malformed JSON can lead to failures in real systems.
+
+---
 
 ## Features
 
-- Tokenizes JSON into meaningful parts.
-- Parses into Python objects (dict, list).
-- Validates structure and detects duplicate keys.
-- Error handling for malformed input.
+- **Lexical Analyzer**: Extracts tokens (`{`, `:`, strings, numbers, etc.) using regular expressions.
+- **Parser**: Implements **recursive descent** parsing to build Python dictionaries/lists.
+- **Semantic Validator**:
+  - Detects **duplicate keys** within objects.
+  - Handles invalid structures or types.
+- **Multi-JSON Support**: Accepts arrays of JSON objects and validates each individually.
+- **Error Reporting**: Detailed, readable messages.
+- **GUI (Tkinter)**: Simple UI to load and validate files without the command line.
+
+---
+
+## Final Additions (Phase 3)
+
+###  Multi-JSON Support
+
+Now supports an array of JSON objects.
+    
+
+---
+## User Interface (UI)
+
+Created a GUI using Tkinter for users who prefer clicking over command-line typing.
+
+Run using:
+
+''' python src/ui.py '''
+
+## Features:
+
+- File selector
+- Scrollable output
 
 ---
 
@@ -55,20 +80,34 @@ This project uses semantic versioning:
 Version	Description
 - v1.0.0	First working build: Parser + Validator
 - v1.1.0	Enhanced error handling
-- v2.0.0	Future: Add GUI / Partial parsing support
+- v2.0.0	Added GUI / Multi Json support
 
 ---
 
-## Future Scope
+## Usage
 
-- GUI interface using Tkinter or PyQt.
-- Support for partial validation.
-- Integration with web-based tools or APIs.
+#### CLI:
+- python src/main.py examples/valid.json
+#### GUI:
+- python src/ui.py
 
 ---
 
-## What's New (v1.1.0)
+## Project Outcome
 
-- Added support for multiple JSON objects in one file.
-- Parser now processes each object individually.
-- Improved error reporting without stopping after first error.
+- Developed full compiler simulation for JSON
+- Validates both single and multiple JSON objects
+- Modular and testable architecture
+- Simple UI for non-technical users
+- Uploaded and maintained as a final GitHub submission
+
+---
+
+## Final Note
+
+This was a self-built, end-to-end academic project with no external collaboration.
+Created and submitted as part of my college's PBL requirement to apply theoretical concepts in a practical environment.
+
+## Demo
+
+![Demo](./demo.gif)
