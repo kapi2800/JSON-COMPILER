@@ -4,6 +4,12 @@ This project is a **lightweight compiler and validator for JSON (JavaScript Obje
 
 ---
 
+## Demo
+
+![Demo](./demo.gif)
+
+---
+
 ## Why I Made This
 
 This project was built as my **college PBL (Project-Based Learning) submission**, carried out in **three progressive phases**:
@@ -15,12 +21,6 @@ This project was built as my **college PBL (Project-Based Learning) submission**
    - Added a **Graphical User Interface (GUI)** using `Tkinter` for easier and more user-friendly operation.
 
 All design, implementation, testing, and documentation were done independently.
-
----
-
-## Demo
-
-![Demo](./demo.gif)
 
 ---
 
