@@ -1,5 +1,9 @@
 # JSON Compiler & Validator
 
+<p align="center">
+  <img src="logo.jpeg" width="250"/>
+</p>
+
 This project is a **lightweight compiler and validator for JSON (JavaScript Object Notation)**, created as part of a **Project-Based Learning (PBL)** curriculum in my college. It applies compiler design concepts such as **Lexical Analysis**, **Parsing**, and **Semantic Validation** specifically tailored to JSON structures.
 
 ---
